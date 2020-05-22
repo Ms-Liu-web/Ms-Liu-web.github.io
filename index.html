@@ -140,6 +140,72 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-vue生命周期钩子" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/22/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90/">vue生命周期钩子</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/22/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90/" class="archive-article-date">
+  	<time datetime="2020-05-22T01:25:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="什么是生命周期"><a href="#什么是生命周期" class="headerlink" title="什么是生命周期"></a>什么是生命周期</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在vue实例被初始化的过程中,需要设置数据更新,模板编译,将实例挂在到dom上,以及数据改变更新dom等一系列过程,在这过程中也会运行声明周期钩子函数,让我们有机会在这期间添加代码,实现我们的业务逻辑.</span><br></pre></td></tr></table></figure>
+<h4 id="常用钩子函数"><a href="#常用钩子函数" class="headerlink" title="常用钩子函数"></a>常用钩子函数</h4><p>vue的声明周期钩子函数一共有11个,下列为常用的8个:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">beforeCreate() <span class="comment">//创建前,vue 实例的挂载元素$el 和数据对象 data 都为 undefined，还未初始化。</span></span><br><span class="line"> created()       <span class="comment">//创建后,vue 实例的数据对象 data 有了，$el 还没有。</span></span><br><span class="line"> beforeMount()   <span class="comment">//挂载前,vue 实例的$el 和 data 都初始化了，但还是挂载之前为虚拟的dom节点，data.message 还未替换。</span></span><br><span class="line"> mounted()       <span class="comment">//挂载后,vue 实例挂载完成，data.message 成功渲染</span></span><br><span class="line"> beforeUpdate()  <span class="comment">//data数据发生变更</span></span><br><span class="line"> updated()       <span class="comment">//data数据发生变更</span></span><br><span class="line"> beforeDestroy() <span class="comment">//解除组件,销毁事件</span></span><br><span class="line"> destroyed()     <span class="comment">//对 data 的改变不会再触发周期函数，说明此时 vue 实例已经解除了事件监听以及和 dom 的绑定，但是 dom 结构依然存在</span></span><br></pre></td></tr></table></figure>
+<h4 id="相关连接"><a href="#相关连接" class="headerlink" title="相关连接"></a>相关连接</h4><p>vue官网-<a href="https://vuejs.org/v2/guide/instance.html" target="_blank" rel="noopener">生命周期钩子函数</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/22/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-vue-路由配置-用户权限生成动态路由”" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

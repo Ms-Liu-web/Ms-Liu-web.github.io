@@ -435,6 +435,77 @@
 
 
   
+    <article id="post-使用css方法让一个盒子垂直水平居中" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/22/%E4%BD%BF%E7%94%A8css%E6%96%B9%E6%B3%95%E8%AE%A9%E4%B8%80%E4%B8%AA%E7%9B%92%E5%AD%90%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/">让一个盒子垂直水平居中</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/22/%E4%BD%BF%E7%94%A8css%E6%96%B9%E6%B3%95%E8%AE%A9%E4%B8%80%E4%B8%AA%E7%9B%92%E5%AD%90%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/" class="archive-article-date">
+  	<time datetime="2019-12-22T01:25:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>HTML部分</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"father"</span>&gt;</span><br><span class="line">  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"son"</span>&gt;居中&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="第一种-盒子有宽高的情况-可兼容IE7以上"><a href="#第一种-盒子有宽高的情况-可兼容IE7以上" class="headerlink" title="第一种  盒子有宽高的情况(可兼容IE7以上)"></a>第一种  盒子有宽高的情况(可兼容IE7以上)</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">.father&#123;</span><br><span class="line">  position: relative;</span><br><span class="line">  width: <span class="number">500</span>px;</span><br><span class="line">  height: <span class="number">500</span>px;</span><br><span class="line">  background-color: #ccc;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.son&#123;</span><br><span class="line">  width: <span class="number">40</span>px;</span><br><span class="line">  height: <span class="number">40</span>px;</span><br><span class="line">  position: absolute;</span><br><span class="line">  margin: auto;</span><br><span class="line">  top: <span class="number">0</span>;</span><br><span class="line">  left: <span class="number">0</span>;</span><br><span class="line">  bottom: <span class="number">0</span>;</span><br><span class="line">  right: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="第二种-盒子不定宽高的情况"><a href="#第二种-盒子不定宽高的情况" class="headerlink" title="第二种 盒子不定宽高的情况"></a>第二种 盒子不定宽高的情况</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.father &#123;</span><br><span class="line">        width: <span class="number">100</span>px;</span><br><span class="line">        height: <span class="number">100</span>px;</span><br><span class="line">        background-color: #ccc;</span><br><span class="line">        display: table-cell;</span><br><span class="line">        vertical-align: middle;</span><br><span class="line">        text-align: center;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      .son &#123;</span><br><span class="line">        display: inline-block;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="第三种-盒子不定宽高的情况-transform是css3属性-有兼容性问题-以下IE8能使用"><a href="#第三种-盒子不定宽高的情况-transform是css3属性-有兼容性问题-以下IE8能使用" class="headerlink" title="第三种 盒子不定宽高的情况(transform是css3属性,有兼容性问题,以下IE8能使用)"></a>第三种 盒子不定宽高的情况(transform是css3属性,有兼容性问题,以下IE8能使用)</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.father&#123;</span><br><span class="line">  position: relative;</span><br><span class="line">  width: <span class="number">500</span>px;</span><br><span class="line">  height: <span class="number">500</span>px;</span><br><span class="line">  background-color: #ccc;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.son&#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  top:<span class="number">50</span>%;</span><br><span class="line">  left: <span class="number">50</span>%;</span><br><span class="line">  transform: translate(<span class="number">-50</span>%,<span class="number">-50</span>%);</span><br><span class="line">  -webkit-transform:translateX(<span class="number">-50</span>%) translateY(<span class="number">-50</span>%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="第四种-盒子不定宽高的情况-有兼容性问题-以下IE大多不兼容display-flex布局"><a href="#第四种-盒子不定宽高的情况-有兼容性问题-以下IE大多不兼容display-flex布局" class="headerlink" title="第四种 盒子不定宽高的情况(有兼容性问题,以下IE大多不兼容display:flex布局)"></a>第四种 盒子不定宽高的情况(有兼容性问题,以下IE大多不兼容display:flex布局)</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.father &#123;</span><br><span class="line">      width: <span class="number">200</span>px;</span><br><span class="line">      height: <span class="number">200</span>px;</span><br><span class="line">      background-color: #ccc;</span><br><span class="line">      display: flex;</span><br><span class="line">      justify-content: center;</span><br><span class="line">      align-items: center;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/22/%E4%BD%BF%E7%94%A8css%E6%96%B9%E6%B3%95%E8%AE%A9%E4%B8%80%E4%B8%AA%E7%9B%92%E5%AD%90%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
 
 

@@ -569,6 +569,125 @@
 
 
   
+    <article id="post-vue项目初始化笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/22/vue%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96%E7%AC%94%E8%AE%B0/">vue前端项目初始化</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/22/vue%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2019-03-22T07:05:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="必要配置"><a href="#必要配置" class="headerlink" title="必要配置"></a>必要配置</h4><ul>
+<li>安装 vue &gt;&gt;&gt; npm i vue</li>
+<li>安装 vue/cli &gt;&gt;&gt; npm i @vue/cli -g</li>
+</ul>
+<h4 id="脚手架生成项目"><a href="#脚手架生成项目" class="headerlink" title="脚手架生成项目"></a>脚手架生成项目</h4><ul>
+<li>命令行工具: vue create xxxx</li>
+<li>图形化工具:vue ui</li>
+</ul>
+<h4 id="脚手架命令说明-空格选择-回车键确认"><a href="#脚手架命令说明-空格选择-回车键确认" class="headerlink" title="脚手架命令说明(空格选择,回车键确认)"></a>脚手架命令说明(空格选择,回车键确认)</h4><ul>
+<li>请选择一个模板或者自己配置&gt;&gt;&gt;Manually select features</li>
+<li>选择项目所需要的功能&gt;&gt;&gt;根据需要选择</li>
+<li>Use history mode for router?&gt;&gt;&gt;是否使用历史模式路由&gt;&gt;&gt; N</li>
+<li>Pick a CSS pre-processor ?&gt;&gt;&gt; 选择 css 预处理器&gt;&gt;&gt;根据需要</li>
+<li>Pick a linter / formatter config?&gt;&gt;&gt;选择语法校验版本&gt;&gt;&gt;Standard config 标准模式</li>
+<li>Pick additional lint features?&gt;&gt;&gt;什么时候校验语法&gt;&gt;&gt;Lint on save</li>
+<li>Where do you prefer placing config for Babel, ESLint, etc.?&gt;&gt;&gt;喜欢在哪里配置 Babel, ESLint 等&gt;&gt;&gt;In dedicated config files(单独的文件)</li>
+<li>Save this as a preset for future projects?&gt;&gt;&gt; 保存这次设置吗?&gt;&gt;&gt;选择 Y 就设置一个名字,N 不保存</li>
+</ul>
+<h4 id="脚手架生成的结构文件说明"><a href="#脚手架生成的结构文件说明" class="headerlink" title="脚手架生成的结构文件说明"></a>脚手架生成的结构文件说明</h4><ul>
+<li>raedMe.md – 项目说明</li>
+<li>Package.json – 包版本管理</li>
+<li>Gitignore – git 忽略文件</li>
+<li>Public –静态资源管理文件夹</li>
+<li>Src –组件源码目录</li>
+<li>Babel.config.js –babel 配置文件</li>
+<li>Assets –样式表，图片文件夹</li>
+<li>Components –组件文件夹</li>
+<li>Views –视图组件文件夹</li>
+<li>App.vue –项目根组件（承载所有项目的根组件）</li>
+<li>Main.js –打包入口文件</li>
+<li>Router.js – 路由相关的配置文件</li>
+</ul>
+<h4 id="项目初始化完成-启动项目"><a href="#项目初始化完成-启动项目" class="headerlink" title="项目初始化完成,启动项目"></a>项目初始化完成,启动项目</h4><ul>
+<li>cd xxx(项目文件夹)</li>
+<li>npm run serve 启动项目</li>
+</ul>
+<h4 id="插件安装-使用-列"><a href="#插件安装-使用-列" class="headerlink" title="插件安装/使用(列)"></a>插件安装/使用(列)</h4><ul>
+<li>npm i element-ui -s 安装插件</li>
+<li>打包入口文件中引入,即 main.js 文件中</li>
+<li></li>
+<li>整体引入如下:</li>
+<li>mport ElementUI from ‘element-ui’</li>
+<li>import ‘element-ui/lib/theme-chalk/index.css’</li>
+<li>Vue.use(ElementUI)</li>
+<li>按需引入如下:</li>
+<li>mport {button} from ‘element-ui’</li>
+<li>import ‘element-ui/lib/theme-chalk/index.css’</li>
+<li>Vue.use(button)</li>
+</ul>
+<h4 id="axios-引入和使用"><a href="#axios-引入和使用" class="headerlink" title="axios 引入和使用"></a>axios 引入和使用</h4><ul>
+<li>npm i axios -S</li>
+<li>在打包入口文件中引入,即 main.js 文件中</li>
+<li>import axios from ‘axios’</li>
+<li>axios.defaults.baseURL=’接口基准地址如(<a href="http://127.0.0.1:8888/api/private/v1/)’" target="_blank" rel="noopener">http://127.0.0.1:8888/api/private/v1/)’</a></li>
+<li>Vue.prototype.$http=axios</li>
+<li>使用时:this.$http.get(xxx)</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/22/vue%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
 
 

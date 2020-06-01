@@ -16,7 +16,7 @@
 <meta property="og:description" content="必要配置 安装 vue &gt;&gt;&gt; npm i vue 安装 vue&#x2F;cli &gt;&gt;&gt; npm i @vue&#x2F;cli -g  脚手架生成项目 命令行工具: vue create xxxx 图形化工具:vue ui  脚手架命令说明(空格选择,回车键确认) 请选择一个模板或者自己配置&gt;&gt;&gt;Manually select features 选择项目所需要">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-03-22T07:05:21.000Z">
-<meta property="article:modified_time" content="2020-05-28T05:42:56.733Z">
+<meta property="article:modified_time" content="2020-05-28T12:22:49.643Z">
 <meta property="article:author" content="Ms.liu">
 <meta name="twitter:card" content="summary">
   
@@ -219,6 +219,10 @@
 <li>Vue.prototype.$http=axios</li>
 <li>使用时:this.$http.get(xxx)</li>
 </ul>
+<h4 id="引入-less-或-sass"><a href="#引入-less-或-sass" class="headerlink" title="引入 less 或 sass"></a>引入 less 或 sass</h4><ul>
+<li>npm install -D less less-loader</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack.config.js -&gt; module.rules</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">"test"</span>: /\.less$/,</span><br><span class="line">  <span class="attr">"use"</span>: [<span class="string">"vue-style-loader"</span>, <span class="string">"css-loader"</span>, <span class="string">"less-loader"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -322,18 +326,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/http%E7%8A%B6%E6%80%81%E7%A0%81/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          http状态码
+          vue生命周期钩子
         
       </div>
     </a>
   
   
-    <a href="/2018/09/22/git%E5%91%BD%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">git命令</div>
+    <a href="/2019/02/21/splice%20slice%20split%20substring%20substr%E7%9A%84%E5%8C%BA%E5%88%AB/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">splice slice split substring substr的区别</div>
       <i class="icon-circle-right"></i>
     </a>
   

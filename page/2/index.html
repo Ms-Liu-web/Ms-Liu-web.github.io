@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 欢迎来到：Ms.liu的个人博客~</title>
+  <title>欢迎来到：Ms.liu的个人博客~</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="欢迎来到：Ms.liu的个人博客~">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="欢迎来到：Ms.liu的个人博客~">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Ms.liu">
@@ -140,302 +140,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-git命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/22/git%E5%91%BD%E4%BB%A4/">git命令</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/22/git%E5%91%BD%E4%BB%A4/" class="archive-article-date">
+  	<time datetime="2018-09-22T04:09:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-22</time>
+</a>
+        
+      </header>
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="git是什么"><a href="#git是什么" class="headerlink" title="git是什么"></a>git是什么</h4><hr>
+<h2 id="是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理"><a href="#是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理" class="headerlink" title="是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理"></a>是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理</h2><h4 id="git常用命令"><a href="#git常用命令" class="headerlink" title="git常用命令"></a>git常用命令</h4><p><img src="https://muli2.oss-cn-beijing.aliyuncs.com/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.jpg" alt="image"></p>
+<h4 id="一-git仓库初始化"><a href="#一-git仓库初始化" class="headerlink" title="一 git仓库初始化"></a>一 git仓库初始化</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">在当前目录新建一个Git代码库</span><br><span class="line">$ git init</span><br><span class="line">新建一个目录，将其初始化为Git代码库</span><br><span class="line">$ git init [project-name]</span><br><span class="line">下载一个项目和它的整个代码历史</span><br><span class="line">$ git clone [url]</span><br></pre></td></tr></table></figure>
+
+<h4 id="二-Git的设置文件为-gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）"><a href="#二-Git的设置文件为-gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）" class="headerlink" title="二 Git的设置文件为.gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）"></a>二 Git的设置文件为.gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">显示当前的Git配置</span><br><span class="line">$ git config --list</span><br><span class="line">编辑Git配置文件</span><br><span class="line">$ git config -e [--global]</span><br><span class="line">设置提交代码时的用户信息</span><br><span class="line">$ git config [--global] user.name <span class="string">"[name]"</span></span><br><span class="line">$ git config [--global] user.email <span class="string">"[email address]”</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">git 修改当前的project的用户名的命令为：&gt; git config user.name 你的目标用户名;</span></span><br><span class="line"><span class="string">git修改当前的project提交邮箱的命令为：&gt; git config user.email 你的目标邮箱名;</span></span><br><span class="line"><span class="string">如果你要修改当前全局的用户名和邮箱时，需要在上面的两条命令中添加一个参数，–global，代表的是全局。</span></span><br><span class="line"><span class="string">命令分别为：</span></span><br><span class="line"><span class="string">&gt; git config  --global user.name 你的目标用户名；</span></span><br><span class="line"><span class="string">&gt; git config  --global user.email 你的目标邮箱名;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="三-删除或修改文件"><a href="#三-删除或修改文件" class="headerlink" title="三 删除或修改文件"></a>三 删除或修改文件</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">添加指定文件到暂存区</span><br><span class="line">$ git add [file1] [file2] ...</span><br><span class="line"> 添加指定目录到暂存区，包括子目录</span><br><span class="line">$ git add [dir]</span><br><span class="line">添加当前目录的所有文件到暂存区</span><br><span class="line">$ git add .</span><br><span class="line">添加每个变化前，都会要求确认</span><br><span class="line">对于同一个文件的多处变化，可以实现分次提交</span><br><span class="line">$ git add -p</span><br><span class="line">删除工作区文件，并且将这次删除放入暂存区</span><br><span class="line">$ git rm [file1] [file2] ...</span><br><span class="line">停止追踪指定文件，但该文件会保留在工作区</span><br><span class="line">$ git rm --cached [file]</span><br><span class="line">改名文件，并且将这个改名放入暂存区</span><br><span class="line">$ git mv [file-original] [file-renamed]</span><br></pre></td></tr></table></figure>
+
+<h4 id="四-提交代码"><a href="#四-提交代码" class="headerlink" title="四 提交代码"></a>四 提交代码</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">提交暂存区到仓库区</span><br><span class="line">$ git commit -m [message]</span><br><span class="line">提交暂存区的指定文件到仓库区</span><br><span class="line">$ git commit [file1] [file2] ... -m [message]</span><br><span class="line">提交工作区自上次commit之后的变化，直接到仓库区</span><br><span class="line">$ git commit -a</span><br><span class="line">提交时显示所有diff信息</span><br><span class="line">$ git commit -v</span><br><span class="line">使用一次新的commit，替代上一次提交</span><br><span class="line">如果代码没有任何新变化，则用来改写上一次commit的提交信息</span><br><span class="line">$ git commit --amend -m [message]</span><br><span class="line">重做上一次commit，并包括指定文件的新变化</span><br><span class="line">$ git commit --amend [file1] [file2] ...</span><br></pre></td></tr></table></figure>
+
+<h4 id="五-分支操作"><a href="#五-分支操作" class="headerlink" title="五 分支操作"></a>五 分支操作</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">列出所有本地分支</span><br><span class="line">$ git branch</span><br><span class="line">列出所有远程分支</span><br><span class="line">$ git branch -r</span><br><span class="line">列出所有本地分支和远程分支</span><br><span class="line">$ git branch -a</span><br><span class="line">新建一个分支，但依然停留在当前分支</span><br><span class="line">$ git branch [branch-name]</span><br><span class="line">新建一个分支，并切换到该分支</span><br><span class="line">$ git checkout -b [branch]</span><br><span class="line">git checkout -b appoint_box（别名） origin/feature/<span class="number">20181128</span>_1491627_appoint_box_1（分支名）</span><br><span class="line">新建一个分支，指向指定commit</span><br><span class="line">$ git branch [branch] [commit]</span><br><span class="line">新建一个分支，与指定的远程分支建立追踪关系</span><br><span class="line">$ git branch --track [branch] [remote-branch]</span><br><span class="line">切换到指定分支，并更新工作区</span><br><span class="line">$ git checkout [branch-name]</span><br><span class="line">切换到上一个分支</span><br><span class="line">$ git checkout -</span><br><span class="line">建立追踪关系，在现有分支与指定的远程分支之间</span><br><span class="line">$ git branch --<span class="keyword">set</span>-upstream [branch] [remote-branch]</span><br><span class="line">合并指定分支到当前分支</span><br><span class="line">$ git merge [branch]</span><br><span class="line">选择一个commit，合并进当前分支</span><br><span class="line">$ git cherry-pick [commit]</span><br><span class="line">删除分支</span><br><span class="line">$ git branch -d [branch-name]</span><br><span class="line">删除远程分支</span><br><span class="line">$ git push origin --delete [branch-name]</span><br><span class="line">$ git branch -dr [remote/branch]</span><br></pre></td></tr></table></figure>
+
+<h4 id="六-teg标签"><a href="#六-teg标签" class="headerlink" title="六 teg标签"></a>六 teg标签</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">列出所有tag</span><br><span class="line">$ git tag</span><br><span class="line">新建一个tag在当前commit</span><br><span class="line">$ git tag [tag]</span><br><span class="line">新建一个tag在指定commit</span><br><span class="line">$ git tag [tag] [commit]</span><br><span class="line">删除本地tag</span><br><span class="line">$ git tag -d [tag]</span><br><span class="line">删除远程tag</span><br><span class="line">$ git push origin :refs/tags/[tagName]</span><br><span class="line">查看tag信息</span><br><span class="line">$ git show [tag]</span><br><span class="line">提交指定tag</span><br><span class="line">$ git push [remote] [tag]</span><br><span class="line">提交所有tag</span><br><span class="line">$ git push [remote] --tags</span><br><span class="line">新建一个分支，指向某个tag</span><br><span class="line">$ git checkout -b [branch] [tag]</span><br></pre></td></tr></table></figure>
+
+<h4 id="七-查看信息"><a href="#七-查看信息" class="headerlink" title="七 查看信息"></a>七 查看信息</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">显示有变更的文件</span><br><span class="line">$ git status</span><br><span class="line">显示当前分支的版本历史</span><br><span class="line">$ git log</span><br><span class="line">显示commit历史，以及每次commit发生变更的文件</span><br><span class="line">$ git log --stat</span><br><span class="line">搜索提交历史，根据关键词</span><br><span class="line">$ git log -S [keyword]</span><br><span class="line">显示某个commit之后的所有变动，每个commit占据一行</span><br><span class="line">$ git log [tag] HEAD --pretty=format:%s</span><br><span class="line">显示某个commit之后的所有变动，其<span class="string">"提交说明"</span>必须符合搜索条件</span><br><span class="line">$ git log [tag] HEAD --grep feature</span><br><span class="line">显示某个文件的版本历史，包括文件改名</span><br><span class="line">$ git log --follow [file]</span><br><span class="line">$ git whatchanged [file]</span><br><span class="line">显示指定文件相关的每一次diff</span><br><span class="line">$ git log -p [file]</span><br><span class="line">显示过去<span class="number">5</span>次提交</span><br><span class="line">$ git log <span class="number">-5</span> --pretty --oneline</span><br><span class="line">显示所有提交过的用户，按提交次数排序</span><br><span class="line">$ git shortlog -sn</span><br><span class="line">显示指定文件是什么人在什么时间修改过</span><br><span class="line">$ git blame [file]</span><br><span class="line">显示暂存区和工作区的代码差异</span><br><span class="line">$ git diff</span><br><span class="line">显示暂存区和上一个commit的差异</span><br><span class="line">$ git diff --cached [file]显示工作区与当前分支最新commit之间的差异</span><br><span class="line">$ git diff HEAD</span><br><span class="line">显示两次提交之间的差异</span><br><span class="line">$ git diff [first-branch]...[second-branch]</span><br><span class="line">显示今天你写了多少行代码</span><br><span class="line">$ git diff --shortstat <span class="string">"@&#123;0 day ago&#125;"</span></span><br><span class="line">显示某次提交的元数据和内容变化</span><br><span class="line">$ git show [commit]</span><br><span class="line">显示某次提交发生变化的文件</span><br><span class="line">$ git show --name-only [commit]</span><br><span class="line">显示某次提交时，某个文件的内容</span><br><span class="line">$ git show [commit]:[filename]</span><br><span class="line">显示当前分支的最近几次提交</span><br><span class="line">$ git reflog</span><br><span class="line">可以得到cimmit id</span><br><span class="line">从本地master拉取代码更新当前分支：branch 一般为master</span><br><span class="line">$ git rebase [branch]</span><br></pre></td></tr></table></figure>
+
+<h4 id="九-撤销操作"><a href="#九-撤销操作" class="headerlink" title="九 撤销操作"></a>九 撤销操作</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">恢复暂存区的指定文件到工作区</span><br><span class="line">$ git checkout [file]</span><br><span class="line">恢复某个commit的指定文件到暂存区和工作区</span><br><span class="line">$ git checkout [commit] [file]</span><br><span class="line">恢复暂存区的所有文件到工作区</span><br><span class="line">$ git checkout .</span><br><span class="line">重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</span><br><span class="line">$ git reset [file]</span><br><span class="line">重置暂存区与工作区，与上一次commit保持一致</span><br><span class="line">$ git reset --hard</span><br><span class="line">重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变</span><br><span class="line">$ git reset [commit]</span><br><span class="line">重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</span><br><span class="line">$ git reset --hard [commit]</span><br><span class="line"> 重置当前HEAD为指定commit，但保持暂存区和工作区不变</span><br><span class="line">$ git reset --keep [commit]</span><br><span class="line">新建一个commit，用来撤销指定commit</span><br><span class="line">后者的所有变化都将被前者抵消，并且应用到当前分支</span><br><span class="line">$ git revert [commit]</span><br><span class="line">暂时将未提交的变化移除，稍后再移入</span><br><span class="line">$ git stash</span><br><span class="line">$ git stash pop</span><br></pre></td></tr></table></figure>
+
+<h4 id="十-常用操作"><a href="#十-常用操作" class="headerlink" title="十 常用操作"></a>十 常用操作</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">上传本地项目到远程仓库</span><br><span class="line"><span class="number">1</span>、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库</span><br><span class="line"></span><br><span class="line">git init</span><br><span class="line"><span class="number">2</span>、把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件</span><br><span class="line"></span><br><span class="line">git add .</span><br><span class="line"><span class="number">3</span>、用命令 git commit告诉Git，把文件提交到仓库。引号内为提交说明</span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">'first commit'</span></span><br><span class="line"><span class="number">4</span>、关联到远程库</span><br><span class="line"></span><br><span class="line">git remote add origin 你的远程库地址</span><br><span class="line">如：</span><br><span class="line"></span><br><span class="line">git remote add origin https:<span class="comment">//github.com/XXX.git</span></span><br><span class="line"><span class="number">5</span>、获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）</span><br><span class="line"></span><br><span class="line">git pull --rebase origin master</span><br><span class="line"><span class="number">6</span>、把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。</span><br><span class="line"></span><br><span class="line">git push -u origin master</span><br><span class="line"><span class="number">7</span>、状态查询命令</span><br><span class="line"></span><br><span class="line">git status</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/18/vue-%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE-%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E7%94%9F%E6%88%90%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E2%80%9D/" class="archive-article-date">
-  	<time datetime="2020-05-18T09:20:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/18/vue-%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE-%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E7%94%9F%E6%88%90%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E2%80%9D/">vue-路由配置+用户权限生成动态路由”</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/22/git%E5%91%BD%E4%BB%A4/">展开全文 >></a>
+        </p>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/22/%E4%BD%BF%E7%94%A8css%E6%96%B9%E6%B3%95%E8%AE%A9%E4%B8%80%E4%B8%AA%E7%9B%92%E5%AD%90%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/" class="archive-article-date">
-  	<time datetime="2019-12-22T01:25:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/22/%E4%BD%BF%E7%94%A8css%E6%96%B9%E6%B3%95%E8%AE%A9%E4%B8%80%E4%B8%AA%E7%9B%92%E5%AD%90%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/">让一个盒子垂直水平居中</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/20/class%E7%BB%A7%E6%89%BFdemo/" class="archive-article-date">
-  	<time datetime="2019-09-20T02:10:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/20/class%E7%BB%A7%E6%89%BFdemo/">class继承</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/18/let-const-var%E5%A3%B0%E6%98%8E%E7%9A%84%E5%8F%98%E9%87%8F%E6%9C%89%E4%BD%95%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2019-08-18T08:10:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/18/let-const-var%E5%A3%B0%E6%98%8E%E7%9A%84%E5%8F%98%E9%87%8F%E6%9C%89%E4%BD%95%E5%8C%BA%E5%88%AB/">let const var声明的变量有何区别</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/18/cookie-sessionstorage-localstorage%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2019-08-18T07:27:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/18/cookie-sessionstorage-localstorage%E7%9A%84%E5%8C%BA%E5%88%AB/">cookie sessionstorage localstorage的区别</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/23/%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%96%B9%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2019-07-23T01:05:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/23/%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%96%B9%E6%B3%95/">判断数据类型的方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/22/http%E7%8A%B6%E6%80%81%E7%A0%81/" class="archive-article-date">
-  	<time datetime="2019-05-22T01:25:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/22/http%E7%8A%B6%E6%80%81%E7%A0%81/">http状态码</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/22/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90/" class="archive-article-date">
-  	<time datetime="2019-05-22T01:25:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/22/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90/">vue生命周期钩子</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/22/vue%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2019-03-22T07:05:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/22/vue%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96%E7%AC%94%E8%AE%B0/">vue前端项目初始化</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/02/21/splice%20slice%20split%20substring%20substr%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2019-02-21T02:00:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/02/21/splice%20slice%20split%20substring%20substr%E7%9A%84%E5%8C%BA%E5%88%AB/">splice slice split substring substr的区别</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
-  
-
-    
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
     </nav>
   
 
@@ -459,9 +246,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
+		isHome: true,
 		isPost: false,
-		isArchive: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
